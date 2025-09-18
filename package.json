@@ -1,7 +1,7 @@
 {
   "name": "tinkering",
   "displayName": "tinkering",
-  "description": "Run tinker in easy way",
+  "description": "A simple and convenient way to run Laravel Tinker directly inside VSCode, avoiding the complexity of writing commands manually in the terminal.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.103.0"
