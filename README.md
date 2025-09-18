@@ -1,6 +1,9 @@
 # Tinkering
 
-**Tinkering** is a Visual Studio Code extension that allows you to run Laravel Tinker easily from within VSCode. It provides a dedicated playground for PHP code execution, CodeLens for running scripts, and a play button in the editor title for quick execution.
+**Tinkering** is a Visual Studio Code extension that allows you to run Laravel Tinker easily from within VSCode.  
+It provides a dedicated playground for PHP code execution, CodeLens for running scripts, and a play button in the editor title for quick execution.  
+
+> A simple and convenient way to run Laravel Tinker directly inside VSCode, avoiding the complexity of writing commands manually in the terminal.
 
 ---
 
@@ -25,3 +28,34 @@
 4. Compile TypeScript:  
    ```bash
    npm run compile
+
+## Example
+
+### 1. Playground File
+```php
+// .tinkering/playground.php
+use App\Models\User;
+
+// Retrieve User
+User::where('email','author@example.com')->get();
+```
+
+### 2. Output
+    [SQL] select * from `users` where `email` = ?
+    [Bindings: author@example.com]
+    [Time: 3.59 ms]
+    ----------------------------
+    = Illuminate\Database\Eloquent\Collection {#2065
+        all: [
+          App\Models\User {#6626
+            id: 1,
+            name: "John Author",
+            email: "author@example.com",
+            email_verified_at: null,
+            #password: "$2y$12$8dXcRyxRmDyOpTaeqvnzpeeteYZKIIn6Hs7/m0fuuhP/CBvUBWA7e",
+            #remember_token: null,
+            created_at: "2025-08-13 02:35:02",
+            updated_at: "2025-08-13 02:35:02",
+          },
+        ],
+      }
